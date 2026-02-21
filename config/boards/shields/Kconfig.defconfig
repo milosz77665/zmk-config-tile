@@ -1,0 +1,6 @@
+if SHIELD_TILE_LEFT || SHIELD_TILE_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Tile"
+
+endif
