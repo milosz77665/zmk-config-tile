@@ -1,13 +1,1 @@
 #include "tile.dtsi"
-
-&kscan0 {
-    col-gpios
-        /* TUTAJ WPISZ SWOJE FIZYCZNE PINY Z NICE!NANO V2 */
-        /* Kolejność: od lewej do prawej dłoni (od małego palca do wskazującego) */
-        = <&pro_micro 1 GPIO_ACTIVE_HIGH> 
-        , <&pro_micro 2 GPIO_ACTIVE_HIGH> 
-        , <&pro_micro 3 GPIO_ACTIVE_HIGH> 
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH> 
-        , <&pro_micro 5 GPIO_ACTIVE_HIGH> 
-        ;
-};
