@@ -1,5 +1,19 @@
 #include "tile.dtsi"
 
-&default_transform {
-    col-offset = <5>;
+&default_transform { 
+    /* Offset musi wynosić dokładnie tyle, ile kolumn ma lewa połówka! */
+    /* Jeśli lewa połówka ma np. 5 kolumn, wpisz tu 5. Jeśli 6, wpisz 6. */
+    col-offset = <5>; 
+};
+
+&kscan0 {
+    col-gpios
+        /* MAGIA LUSTRZANEGO ODBICIA DZIEJE SIĘ TUTAJ */
+        /* Odwrócona kolejność pinów względem lewej połówki - czytane od lewej do prawej na odwróconym PCB */
+        = <&pro_micro 5 GPIO_ACTIVE_HIGH> 
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH> 
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH> 
+        , <&pro_micro 2 GPIO_ACTIVE_HIGH> 
+        , <&pro_micro 1 GPIO_ACTIVE_HIGH> 
+        ;
 };

@@ -1,6 +1,19 @@
+if SHIELD_TILE_LEFT
+
+# Nazwa, która będzie się wyświetlać w Bluetooth na telefonie/komputerze
+config ZMK_KEYBOARD_NAME
+    default "Tile Keyboard"
+
+# To zmusza lewą połówkę do bycia główną (łączy się z PC)
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
 if SHIELD_TILE_LEFT || SHIELD_TILE_RIGHT
 
-config ZMK_KEYBOARD_NAME
-    default "Tile"
+# Włącza obsługę klawiatury dzielonej dla obu połówek
+config ZMK_SPLIT
+    default y
 
 endif
